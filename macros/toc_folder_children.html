@@ -1,0 +1,21 @@
+{# Reusable ToC listing only the children of the current folder #}
+
+{% set current_section = page.title %}
+{% for section in navigation %}
+  {% if section.title == current_section %}
+    {% for child in section.children %}
+      {% if child.is_section %}
+### {{ child.title }}
+
+        {% for page in child.children %}
+          {% if page.is_page and not page.url.endswith("index.html") %}
+- [{{ page.title if page.title else page.url.split('/')[-2]|replace('-', ' ')|capitalize }}]({{ page.url }})
+          {% endif %}
+        {% endfor %}
+
+      {% elif child.is_page and not child.url.endswith("index.html") %}
+- [{{ child.title if child.title else child.url.split('/')[-2]|replace('-', ' ')|capitalize }}]({{ child.url }})
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}

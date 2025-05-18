@@ -1,0 +1,44 @@
+/* Styles personnalisés pour MDMY GROUP */
+
+:root {
+  /* Couleurs de base de MDMY Group */
+  --md-primary-bg-color: #f5f5f5;         /* Primary Background (Light Gray) */
+  --md-primary-fg-color: #000000;         /* Primary Text and Icons (Muted Blue) */
+  --md-primary-fg-color--light: #90b0ba;  /* Accent 2 (Soft Teal) */
+  --md-primary-fg-color--dark: #415a77;   /* Accent 1 (Dark Blue) */
+  --md-accent-fg-color: #3b917a;          /* Accent 3 (Soft Green) */
+  --md-accent-bg-color: #e0e1dd;          /* Accent 5 (Light Grayish Blue) */
+  --md-accent-highlight: #e5cb95;         /* Accent 4 (Muted Gold) */
+  --md-text-color: #53677a;               /* Primary Text (Muted Blue) */
+  --md-secondary-text-color: #777777;     /* Secondary Text (Gray) */
+  --md-footer-text-color: #646464;        /* Accent 6 (Dark Gray) */
+}
+
+/* En-tête et navigation */
+.md-header {
+  background-color: var(--md-primary-fg-color);
+}
+
+/* Liens secondaires */
+.md-nav__link:not(.md-nav__container):hover {
+  color: var(--md-accent-fg-color);
+}
+
+/* Pied de page */
+.md-footer {
+  background-color: var(--md-primary-fg-color--dark);
+}
+
+.md-footer-meta {
+  background-color: var(--md-primary-fg-color);
+}
+
+.md-footer-copyright {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Force code block wrapping */
+.md-typeset pre code {
+  white-space: pre-wrap;       /* Wrap long lines */
+  word-break: break-word;      /* Break at word boundaries */
+}
