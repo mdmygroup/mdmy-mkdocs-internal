@@ -1,0 +1,11 @@
+mkdocs==1.6.0
+mkdocs-material==9.4.7
+mkdocs-minify-plugin==0.7.1
+mkdocs-awesome-nav==3.1.1
+mkdocs-print-site-plugin==2.3.6
+mkdocs-macros-plugin==1.0.4
+pymdown-extensions==10.3.1
+pygments==2.16.1
+pillow==10.1.0
+cairosvg==2.7.1
+mike==1.1.2

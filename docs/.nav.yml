@@ -1,0 +1,15 @@
+# This file is used to define the navigation structure of the documentation site.
+
+ignore:
+- "*.hidden.md"
+- hidden/ 
+
+nav: 
+  - Accueil: index.md
+  - Documentation Générale: documentation-generale
+  - "*"
+
+  # - Mentions légales:
+  #   - Mentions légales: legal-notice.md
+  #   - Politique de confidentialité: privacy-policy.md
+  #   - Conditions d'utilisation: terms-of-service.md

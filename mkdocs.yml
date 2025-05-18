@@ -1,0 +1,100 @@
+site_name: Documentation
+site_description: Centre de documentation technique et commerciale
+site_url: https://www.docs.mdmygroup.com/
+
+# Repository
+repo_name: mdmy-mkdocs
+repo_url: https://github.com/mdmygroup/mdmy-mkdocs
+edit_uri: edit/main/docs/
+
+# Copyright
+copyright: Copyright &copy; 2025 MDMY GROUP SAS
+
+# Theme configuration
+theme:
+  name: material
+  custom_dir: overrides
+  language: fr
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+    - toc.follow
+  palette:
+    - scheme: default
+      primary: "#53677a"   # Muted Blue - Primary Text and Icons
+      accent: "#415a77"    # Dark Blue - Accent 1
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Passer au mode sombre
+    - scheme: slate
+      primary: "#53677a"   # Muted Blue - Primary Text and Icons
+      accent: "#7fcdb8"    # Soft Green - Accent 3
+      toggle:
+        icon: material/toggle-switch
+        name: Passer au mode clair
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: public/favicon/favicon.ico
+  logo: public/logo/logo_white.png
+  icon:
+    logo: logo
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+
+# Plugins
+plugins:
+  - search
+  - awesome-nav
+  - macros:
+      include_dir: docs/macros
+  - minify:
+      minify_html: true
+
+# Extra CSS for custom styling
+extra_css:
+  - assets/stylesheets/extra.css
+
+# Extra configuration
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/mdmygroup
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/company/mdmy-group.
+    - icon: fontawesome/brands/instagram
+      link: https://www.instagram.com/mdmy_group/
+  analytics:
+    provider: google
+    property: !ENV GOOGLE_ANALYTICS_KEY
+  version:
+    provider: mike
+    default: latest
+  consent:
+    title: Consentement aux cookies
+    description: >-
+      Nous utilisons des cookies pour reconnaître vos visites répétées et vos préférences, ainsi que 
+      pour mesurer l'efficacité de notre documentation et déterminer si les utilisateurs 
+      trouvent ce qu'ils recherchent.
