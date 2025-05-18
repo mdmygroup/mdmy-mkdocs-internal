@@ -1,10 +1,10 @@
 site_name: Documentation
 site_description: Centre de documentation technique et commerciale
-site_url: https://www.docs.mdmygroup.com/
+site_url: https://www.internal.mdmygroup.com/
 
 # Repository
-repo_name: mdmy-mkdocs
-repo_url: https://github.com/mdmygroup/mdmy-mkdocs
+repo_name: mdmy-mkdocs-internal
+repo_url: https://github.com/mdmygroup/mdmy-mkdocs-internal
 edit_uri: edit/main/docs/
 
 # Copyright
